@@ -1,0 +1,312 @@
+/* 기본 스타일 초기화 */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Noto Sans KR', sans-serif;
+   line-height: 1.6;
+   color: #333;
+}
+
+/* 헤더 스타일 */
+.main-header {
+   position: relative;
+   height: 100px;
+}
+
+.overlay {
+   background-color: rgba(0, 0, 0, 0.5);
+   height: 100%;
+}
+
+.logo img {
+   height: 50px;
+}
+
+.main-nav {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px 50px;
+}
+
+.main-nav ul {
+   display: flex;
+   list-style: none;
+}
+
+.main-nav li {
+   margin-left: 20px;
+}
+
+.main-nav a {
+   text-decoration: none;
+   color: white;
+   font-weight: bold;
+   font-size: 16px;
+}
+
+.main-nav .book-btn {
+   padding: 8px 15px;
+   background: #fff;
+   color: #333;
+   border-radius: 5px;
+}
+
+/* 코스 섹션 */
+.empowering {
+   background: rgba(0, 0, 0, 0.5) url('./images/note1.png') no-repeat center center/cover;
+   position: relative;
+   margin-top: -70px;
+   color: white;
+}
+
+.course-section {
+   max-width: 1200px;
+   margin: 50px auto;
+   padding: 20px;
+}
+
+.course-section h2 {
+   font-size: 36px;
+   margin-bottom: 10px;
+}
+
+.course-section p {
+   font-size: 18px;
+   margin-bottom: 30px;
+}
+
+.start-btn {
+   padding: 12px 25px;
+   background-color: #007bff;
+   color: #fff;
+   font-size: 16px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   margin-bottom: 40px;
+}
+
+.start-btn:hover {
+   background-color: #0056b3;
+}
+
+/* 게시판 테이블 */
+.board_list {
+   width: 100%;
+   border-collapse: collapse;
+   margin-bottom: 30px;
+}
+
+.board_list th,
+.board_list td {
+   border: 1px solid #ddd;
+   padding: 10px;
+   text-align: center;
+}
+
+.board_list th {
+   background-color: #f2f2f2;
+}
+
+.board_list .title {
+   text-align: left;
+}
+
+/* 글쓰기 버튼 */
+.bt_wrap {
+   text-align: right;
+   margin-bottom: 30px;
+}
+
+.bt_wrap a {
+   display: inline-block;
+   padding: 8px 20px;
+   background: #28a745;
+   color: #fff;
+   border-radius: 5px;
+   text-decoration: none;
+}
+
+.bt_wrap a:hover {
+   background: #218838;
+}
+
+/* 페이지 네비게이션 */
+.board_page {
+   text-align: center;
+   margin-bottom: 50px;
+}
+
+.board_page a {
+   display: inline-block;
+   margin: 0 5px;
+   padding: 8px 12px;
+   background: #f2f2f2;
+   color: #333;
+   border-radius: 3px;
+   text-decoration: none;
+}
+
+.board_page a.on {
+   background: #007bff;
+   color: white;
+}
+
+/* 상품 리스트 */
+#container {
+   padding: 50px 0;
+}
+
+#container h1 {
+   text-align: center;
+   font-size: 32px;
+   margin-bottom: 30px;
+}
+
+.prod-list {
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+}
+
+.prod-list li {
+   list-style: none;
+   width: 300px;
+   margin-bottom: 30px;
+   background: #fff;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+   border-radius: 10px;
+   overflow: hidden;
+   transition: transform 0.3s;
+}
+
+.prod-list li:hover {
+   transform: translateY(-10px);
+}
+
+.prod-list img {
+   width: 100%;
+   height: 200px;
+   object-fit: cover;
+}
+
+.caption {
+   padding: 15px;
+}
+
+.caption h2 {
+   font-size: 20px;
+   margin-bottom: 10px;
+}
+
+.caption p {
+   font-size: 14px;
+   color: #666;
+}
+
+/* 배너 */
+.banner {
+   background: url('./images/banner.jpg') no-repeat center center/cover;
+   padding: 100px 0;
+   text-align: center;
+   color: white;
+}
+
+.banner-content h1 {
+   font-size: 48px;
+   margin-bottom: 20px;
+}
+
+.banner-content p {
+   font-size: 20px;
+   margin-bottom: 30px;
+}
+
+.shop-button {
+   padding: 10px 20px;
+   background-color: #fff;
+   color: #333;
+   border-radius: 5px;
+   text-decoration: none;
+   font-weight: bold;
+}
+
+/* 푸터 */
+footer {
+   height: 120px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 11px;
+   background-color: #f9f9f9;
+   margin-top: 50px;
+}
+
+/* AOS (애니메이션 효과용) */
+[data-aos] {
+   opacity: 0;
+   transition-property: transform, opacity;
+   transition-duration: 3s;
+}
+
+[data-aos].aos-animate {
+   opacity: 10;
+}
+
+#box1 {
+   background-color: #000;
+
+   animation-name: shape; /* 애니메이션 지정 */
+   animation-duration: 2s; /* 애니메이션 실행 시간 */
+   /* 듀레이션을 안 주면 애니메이션 실행이 안된다. 꼭 같이 지정, 실행*/
+
+   animation-timing-function: linear;
+   animation-iteration-count: 4;
+   animation-direction: alternate;
+   /* alternate-reverse: 홀수 번째는 reverse(to -> from) 짝수 번째는 normal(from -> to로)*/
+}
+/* 전부 id="box1"으로 해도 되지만, id 종속성에 어긋나서 2,3 따로 */
+/* 나중에 id 넣는 방법 외에 다른 방법 찾으면 적용할 것 */
+#box2 {
+   background-color: #000;
+
+   animation-name: shape; /* 애니메이션 지정 */
+   animation-duration: 2s; /* 애니메이션 실행 시간 */
+   /* 듀레이션을 안 주면 애니메이션 실행이 안된다. 꼭 같이 지정, 실행*/
+
+   animation-timing-function: linear;
+   animation-iteration-count: 4;
+   animation-direction: alternate;
+   /* alternate-reverse: 홀수 번째는 reverse(to -> from) 짝수 번째는 normal(from -> to로)*/
+}
+#box3 {
+   background-color: #000;
+
+   animation-name: shape; /* 애니메이션 지정 */
+   animation-duration: 2s; /* 애니메이션 실행 시간 */
+   /* 듀레이션을 안 주면 애니메이션 실행이 안된다. 꼭 같이 지정, 실행*/
+
+   animation-timing-function: linear;
+   animation-iteration-count: 4;
+   animation-direction: alternate;
+   /* alternate-reverse: 홀수 번째는 reverse(to -> from) 짝수 번째는 normal(from -> to로)*/
+}
+
+@keyframes shape {
+   /* shape 애니메이션 정의 */
+   from {
+      border: 1px solid transparent; /* 1px짜리 투명한 테두리 */
+   }
+   70% {
+      border: 1px solid red;
+   }
+   to {
+      border: 1px solid #4cff00;
+      border-radius: 60%; /* 테두리를 둥글게 */
+   }
+}
